@@ -12,7 +12,7 @@ from tqdm import tqdm
 from network import CNNetwork
 
 BATCH_SIZE = 128
-EPOCHS = 10
+EPOCHS = 20
 LEARNING_RATE = 0.001
 
 """
@@ -94,7 +94,7 @@ if __name__ == "__main__":
   train(model, train_dataloader, loss_fn, optimizer, device, EPOCHS)
 
   # save model
-  torch.save(model.state_dict(), "mnist_model.pth")
+  torch.save(model.state_dict(), "main/mnist_model.pth")
   print("Trained feed forward net saved at mnist_model.pth")
 
   
