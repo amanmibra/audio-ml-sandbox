@@ -22,13 +22,13 @@ Data Processing
 def download_mnist_datasets():
     """Download handwritten digit MNIST dataset"""
     train_data = datasets.MNIST(
-        root="main/data",
+        root="mnist/data",
         train=True,
         download=True,
         transform=ToTensor(),
     )
     validation_data = datasets.MNIST(
-        root="main/data",
+        root="mnist/data",
         train=False,
         download=True,
         transform=ToTensor(),
@@ -94,7 +94,7 @@ if __name__ == "__main__":
   train(model, train_dataloader, loss_fn, optimizer, device, EPOCHS)
 
   # save model
-  torch.save(model.state_dict(), "main/mnist_model.pth")
+  torch.save(model.state_dict(), "mnist/mnist_model.pth")
   print("Trained feed forward net saved at mnist_model.pth")
 
   

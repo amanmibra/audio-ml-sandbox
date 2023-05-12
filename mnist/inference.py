@@ -21,7 +21,7 @@ def predict(model, x, y, class_mapping):
 if __name__ == "__main__":
     # load model
     model = CNNetwork()
-    state_dict = torch.load("main/mnist_model.pth")
+    state_dict = torch.load("mnist/mnist_model.pth")
     model.load_state_dict(state_dict)
 
     # load MNIST dataset
